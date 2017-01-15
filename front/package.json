@@ -1,0 +1,85 @@
+{
+  "name": "react-front-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch -d --color --progress",
+    "dev-server": "webpack-dev-server --host 0.0.0.0 --colors --progress",
+    "build": "webpack",
+    "dist": "rm -rf dist && mkdir dist && cp -r *.html img/ build/ dist/",
+    "unit-test": "webpack -d && phantomjs mocha-phantomjs-core test/index.html",
+    "lint": "eslint js test --ext .js,.jsx",
+    "test-outdated": "# test -z '$(npm outdated --parseable)' || npm outdated; exit 1",
+    "test": "npm run lint && npm outdated && npm run unit-test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-eslint": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2016": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-1": "latest",
+    "babel-plugin-transform-runtime": "latest",
+    "chai": "latest",
+    "css-loader": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "file-loader": "latest",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "mocha": "latest",
+    "mocha-phantomjs-core": "latest",
+    "style-loader": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "moment": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "env": {
+      "es6": true,
+      "browser": true,
+      "mocha": true
+    },
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-console": "off",
+      "react/no-find-dom-node": "off",
+      "react/prop-types": "off"
+    }
+  }
+}

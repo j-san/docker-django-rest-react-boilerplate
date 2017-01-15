@@ -1,0 +1,23 @@
+db:
+  image: postgres
+  environment:
+    POSTGRES_USER: dev
+    POSTGRES_DB: dev
+
+api:
+  build: api
+  command: make develop
+  ports:
+    - 8000:8000
+  links:
+    - db
+  volumes:
+    - ./api:/data/app
+
+front:
+  build: front
+  command: npm run dev-server
+  ports:
+    - 8080:8080
+  volumes:
+    - ./front:/data/app

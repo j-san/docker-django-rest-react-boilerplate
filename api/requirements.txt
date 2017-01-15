@@ -1,0 +1,6 @@
+psycopg2
+django
+djangorestframework
+
+# dev
+flake8
