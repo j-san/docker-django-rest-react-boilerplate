@@ -12,7 +12,7 @@ install_requires = open(
 ).read().splitlines()
 
 setup(
-    name='model-graph-api',
+    name='api',
     version=version,
     description="Graph model api",
     long_description=long_description,
