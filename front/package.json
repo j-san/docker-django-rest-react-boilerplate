@@ -1,8 +1,8 @@
 {
-  "name": "react-front-front",
+  "name": "front",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "webpack --watch -d --color --progress",
     "dev-server": "webpack-dev-server --host 0.0.0.0 --colors --progress",
