@@ -1,5 +1,5 @@
 .PHONY        = clean collectstatic install test
-APP_NAME      = 
+APP_NAME      =
 PYTHON        = python
 RPM_RELEASE   = dev
 
@@ -52,7 +52,7 @@ messages:
 
 # Run server
 run: migrate
-	gunicorn main.wsgi --bind 0.0.0.0:80 --workers 4 --name survey-web --statsd-host dd-agent:8125
+	gunicorn main.wsgi --bind 0.0.0.0:80 --workers 4 --name api --statsd-host dd-agent:8125
 
 
 ### TESTS ###
