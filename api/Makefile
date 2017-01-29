@@ -13,7 +13,7 @@ install:
 
 # Prepare static assests for production
 collectstatic:
-	$(PYTHON) manage.py collectstatic --noinput
+	# $(PYTHON) manage.py collectstatic --noinput
 
 
 # Apply database migrations
@@ -64,7 +64,7 @@ test: translations
 
 # Validate for uncommited migrations
 test-migrations:
-	$(PYTHON) manage.py makemigrations --test
+	$(PYTHON) manage.py makemigrations --check
 
 # Run Django unit tests
 test-django:
