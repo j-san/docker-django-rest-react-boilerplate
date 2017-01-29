@@ -23,7 +23,7 @@ migrate:
 
 # Compile mo translation files
 translations:
-	$(PYTHON) manage.py compilemessages
+	# $(PYTHON) manage.py compilemessages
 
 
 ### DEVELOP ###
